@@ -7,21 +7,28 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
+
         steps:
-            - name: Checkout code
-              uses: actions/checkout@v3
+            - name: Checkout 🛎️
+              uses: actions/checkout@v4.1.3
+
+            - name: Use Node.js 20.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: "20.x"
 
             - name: Install dependencies
               run: npm i
 
-            - name: Build
-              run: npm run build
+            - name: Extract repository name
+              run: echo "BASE_PATH=/$(echo $GITHUB_REPOSITORY | cut -d '/' -f 2)" >> $GITHUB_ENV
 
-            - name: Create .nojekyll to bypass Jekyll processing
-              run: echo > ./out/.nojekyll
+            - name: Build my App
+              run: npm run build && touch ./out/.nojekyll
 
-            - name: Deploy to GitHub Pages
-              uses: JamesIves/github-pages-deploy-action@v4
+            - name: Deploy 🚀
+              uses: JamesIves/github-pages-deploy-action@v4.6.0
               with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
                   branch: gh-pages
                   folder: out
