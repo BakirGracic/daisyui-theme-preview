@@ -6,7 +6,9 @@
         "dev": "next dev --turbopack",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "build-static": "next build && next export",
+        "start-static": "npx serve@latest out"        
     },
     "dependencies": {
         "next": "15.0.1",
