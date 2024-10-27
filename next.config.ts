@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
     output: "export",
-    basePath: "https://bakirgracic.github.io/daisyui-theme-preview",
+    basePath: "/daisyui-theme-preview",
     images: { unoptimized: true },
 };
 
