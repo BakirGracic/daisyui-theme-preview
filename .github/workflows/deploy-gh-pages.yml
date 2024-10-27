@@ -1,0 +1,27 @@
+name: Build & Deploy to GitHub Pages (gh-pages branch)
+
+on:
+    push:
+        branches: [main]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            - name: Install dependencies
+              run: npm i
+
+            - name: Build
+              run: npm run build
+
+            - name: Create .nojekyll to bypass Jekyll processing
+              run: echo > ./out/.nojekyll
+
+            - name: Deploy to GitHub Pages
+              uses: JamesIves/github-pages-deploy-action@v4
+              with:
+                  branch: gh-pages
+                  folder: out

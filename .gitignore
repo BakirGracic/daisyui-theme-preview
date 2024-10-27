@@ -14,7 +14,7 @@
 /coverage
 
 # next.js
-# /.next/ # this folder is used for github pages static page serving
+/.next/
 /out/
 
 # production
