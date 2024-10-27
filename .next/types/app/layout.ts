@@ -1,4 +1,4 @@
-// File: /home/bakir/Desktop/daisyui-theme-preview/app/layout.tsx
+// File: /home/runner/work/daisyui-theme-preview/daisyui-theme-preview/app/layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
