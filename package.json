@@ -7,8 +7,7 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "build-static": "next build && next export",
-        "start-static": "npx serve@latest out"        
+        "export": "next export"
     },
     "dependencies": {
         "next": "15.0.1",

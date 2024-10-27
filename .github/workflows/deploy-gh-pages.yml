@@ -1,4 +1,4 @@
-name: Build & Deploy to GitHub Pages (gh-pages branch)
+name: Static Build & Deploy to GitHub Pages (gh-pages branch)
 
 on:
     push:
@@ -26,8 +26,8 @@ jobs:
             - name: Extract repository name
               run: echo "BASE_PATH=/$(echo $GITHUB_REPOSITORY | cut -d '/' -f 2)" >> $GITHUB_ENV
 
-            - name: Build
-              run: npm run build && touch ./out/.nojekyll
+            - name: Build Static
+              run: npm run build && npm run export && touch ./out/.nojekyll
 
             - name: Deploy
               uses: JamesIves/github-pages-deploy-action@v4.6.0
