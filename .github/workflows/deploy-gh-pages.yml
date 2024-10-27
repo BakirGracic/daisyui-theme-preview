@@ -27,7 +27,7 @@ jobs:
               run: echo "BASE_PATH=/$(echo $GITHUB_REPOSITORY | cut -d '/' -f 2)" >> $GITHUB_ENV
 
             - name: Build Static
-              run: npm run build && npm run export && touch ./out/.nojekyll
+              run: npm run export && touch ./out/.nojekyll
 
             - name: Deploy
               uses: JamesIves/github-pages-deploy-action@v4.6.0
