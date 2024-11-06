@@ -1,0 +1,31 @@
+name: Next.js CD
+
+on:
+    push:
+        branches: ["main"]
+
+jobs:
+    build-and-deploy:
+        runs-on: self-hosted
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Use Node.js (22.x)
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "22.x"
+                  cache: "npm"
+
+            - name: Delete Old Folders
+              run: rm -rf node_modules/ .next/
+
+            - name: Install Dependencies
+              run: npm install
+
+            - name: Build
+              run: npm run build
+
+            - name: Restart PM2
+              run: pm2 restart all
