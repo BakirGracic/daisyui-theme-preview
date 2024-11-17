@@ -22,7 +22,7 @@ jobs:
               run: rm -rf node_modules/ .next/
 
             - name: Install Dependencies
-              run: npm install
+              run: npm install --legacy-peer-deps
 
             - name: Build
               run: npm run build
