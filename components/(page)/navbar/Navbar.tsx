@@ -56,10 +56,10 @@ export default function Navbar() {
                     </ul>
                 </div>
                 <Link
-                    href="/"
+                    href="https://daisyui.com/"
                     className="btn btn-ghost"
                 >
-                    DaisyUI Theme Preview
+                    DaisyUI
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">

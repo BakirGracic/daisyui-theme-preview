@@ -40,6 +40,7 @@ export default function CTACards() {
                         <Image
                             src={card.imgSrc}
                             alt={card.title}
+                            priority
                         />
                     </figure>
                     <div className="card-body !text-white !p-6">
