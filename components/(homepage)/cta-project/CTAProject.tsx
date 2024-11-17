@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CTAProject() {
     return (
-        <div className="my-20 flex justify-center items-center gap-4 flex-row flex-wrap">
+        <div className="p-4 flex justify-center items-center gap-4 flex-row flex-wrap">
             {/* daisyui */}
             <Link
                 href="https://daisyui.com/"

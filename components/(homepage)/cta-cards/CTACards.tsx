@@ -30,7 +30,7 @@ const cards = [
 
 export default function CTACards() {
     return (
-        <div className="flex justify-center flex-wrap gap-4">
+        <div className="flex justify-center flex-wrap gap-4 p-4">
             {cards.map((card, index) => (
                 <div
                     key={index}

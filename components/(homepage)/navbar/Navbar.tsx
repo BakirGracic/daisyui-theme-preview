@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ThemeController from "./ThemeController";
+import ThemeController from "@/components/(homepage)/navbar/ThemeController";
 
 export default function Navbar() {
     return (

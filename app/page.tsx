@@ -1,8 +1,9 @@
-import CTACards from "@/components/(page)/cta-cards/CTACards";
-import CTAProject from "@/components/(page)/cta-project/CTAProject";
-import HPIntro from "@/components/(page)/hp-intro/HPIntro";
-import Navbar from "@/components/(page)/navbar/Navbar";
-import Stats from "@/components/(page)/stats/Stats";
+import Navbar from "@/components/(homepage)/navbar/Navbar";
+import HPIntro from "@/components/(homepage)/hp-intro/HPIntro";
+import CTACards from "@/components/(homepage)/cta-cards/CTACards";
+import Stats from "@/components/(homepage)/stats/Stats";
+import CTAProject from "@/components/(homepage)/cta-project/CTAProject";
+import Footer from "@/components/(homepage)/footer/Footer";
 
 export default function Page() {
     return (
@@ -10,8 +11,9 @@ export default function Page() {
             <Navbar />
             <HPIntro />
             <CTACards />
-            <CTAProject />
             <Stats />
+            <CTAProject />
+            <Footer />
         </main>
     );
 }

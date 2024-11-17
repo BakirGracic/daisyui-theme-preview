@@ -14,5 +14,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: "weekly",
             priority: 1,
         },
+        {
+            url: `${process.env.APP_URL}/components`,
+            lastModified: new Date(),
+            changeFrequency: "weekly",
+            priority: 1,
+        },
+        {
+            url: `${process.env.APP_URL}/examples`,
+            lastModified: new Date(),
+            changeFrequency: "weekly",
+            priority: 1,
+        },
+        {
+            url: `${process.env.APP_URL}/custom`,
+            lastModified: new Date(),
+            changeFrequency: "weekly",
+            priority: 1,
+        },
     ];
 }

@@ -6,8 +6,8 @@ export default async function Stats() {
     const githubAPI = await fetch("https://api.github.com/repos/saadeghi/daisyui").then((res) => res.json());
 
     return (
-        <div className="text-center">
-            <div className="stats shadow">
+        <div className="text-center my-12 md:my-20 p-4">
+            <div className="stats shadow-lg stats-vertical md:stats-horizontal bg-base-300">
                 <div className="stat">
                     <div className="stat-figure text-secondary">
                         <svg
