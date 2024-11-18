@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="footer footer-center text-base-content p-4 mt-10">
+        <footer className="footer footer-center text-base-content p-4 mt-12 md:mt-20">
             <aside className="p-3">
                 <p>
                     Built with ♥ by&nbsp;

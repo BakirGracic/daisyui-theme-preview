@@ -37,11 +37,11 @@ export default function TOC() {
             <div className="prose mb-8 text-center mx-auto">
                 <h1>Jump to...</h1>
             </div>
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid gap-3 md:gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
                 {sections.map((section) => (
                     <Link
                         key={section.href}
-                        className="py-8 px-8 bg-base-200 text-xl text-nowrap font-medium rounded-lg text-center hover:bg-primary transition-all hover:text-primary-content"
+                        className="py-7 px-4 bg-base-200 text-xl text-nowrap font-medium rounded-lg text-center hover:bg-primary transition-all hover:text-primary-content"
                         href={section.href}
                     >
                         {section.title}
