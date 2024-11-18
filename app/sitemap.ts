@@ -32,5 +32,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: "weekly",
             priority: 1,
         },
+        // example pages
+        {
+            url: `${process.env.APP_URL}/simple-dashboard`,
+            lastModified: new Date(),
+            changeFrequency: "weekly",
+            priority: 1,
+        },
     ];
 }
