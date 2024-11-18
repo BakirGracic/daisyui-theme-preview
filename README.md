@@ -4,6 +4,8 @@
 
 This project was created to help the DaisyUI community choose the perfect DaisyUI theme for their needs, experiment with their own theme configurations, and explore all DaisyUI plain components along with some real website examples.
 
+[![Next.js CD](https://github.com/BakirGracic/daisyui-theme-preview/actions/workflows/nextjs-cd.yml/badge.svg)](https://github.com/BakirGracic/daisyui-theme-preview/actions/workflows/nextjs-cd.yml)
+
 ### Contributing
 
 We welcome contributions to this project!
