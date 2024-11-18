@@ -1,5 +1,5 @@
-import GroupTitle from "@/components/(components)/body/GroupTitle";
-import SectionTitle from "@/components/(components)/body/SectionTitle";
+import GroupTitle from "@/components/(components)/body/titles/GroupTitle";
+import SectionTitle from "@/components/(components)/body/titles/SectionTitle";
 import Button from "@/components/(components)/body/ACTIONS/Button";
 
 export default function ComponentsList() {

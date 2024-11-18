@@ -34,7 +34,7 @@ export default function CTACards() {
             {cards.map((card, index) => (
                 <div
                     key={index}
-                    className="card bg-base-100 image-full w-96 shadow-"
+                    className="card bg-base-100 image-full w-96 shadow-md"
                 >
                     <figure>
                         <Image
@@ -47,9 +47,12 @@ export default function CTACards() {
                         <h2 className="card-title">{card.title}</h2>
                         <p>{card.description}</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">
-                                <Link href={card.linkHref}>{card.linkText}</Link>
-                            </button>
+                            <Link
+                                className="btn btn-primary"
+                                href={card.linkHref}
+                            >
+                                {card.linkText}
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -12,6 +12,8 @@ We welcome contributions to this project!
 
 With DaisyUI v5 on the horizon, any assistance in keeping this project up-to-date is greatly appreciated.
 
+Additionally, I would like to expand the collection of website examples. Feel free to include some great layouts and get an attribution!
+
 Feel free to contribute in any way you can. Your PR will be reviewed accordingly.
 
 Please read the [CONTRIBUTING.md](https://github.com/BakirGracic/daisyui-theme-preview/blob/main/CONTRIBUTING.md) to understand the process and align your PR with our guidelines. Happy coding!
@@ -19,6 +21,10 @@ Please read the [CONTRIBUTING.md](https://github.com/BakirGracic/daisyui-theme-p
 ### Acknowledgements
 
 A big thank you to the creator [@saadeghi](https://github.com/saadeghi) and the maintainers, supporters, and contributors of DaisyUI, Tailwind, and all other amazing technologies used in this project!
+
+### Attributions
+
+- https://github.com/robbins23/daisyui-admin-dashboard-template (used in Simple Dashboard example)
 
 ### License
 

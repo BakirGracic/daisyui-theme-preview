@@ -1,4 +1,4 @@
-import ExplanatoryTitle from "@/components/(components)/body/ExplanatoryTitle";
+import ExplanatoryTitle from "@/components/(components)/body/titles/ExplanatoryTitle";
 
 export default function Button() {
     return (

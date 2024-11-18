@@ -155,7 +155,7 @@ export default function ThemeController() {
     }, []);
 
     return (
-        <div className="dropdown">
+        <div className="dropdown z-[9999999]">
             <div
                 tabIndex={0}
                 role="button"

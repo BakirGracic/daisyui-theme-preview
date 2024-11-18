@@ -2,11 +2,7 @@ import "@/css/tailwind-base.css";
 import "@/css/global.css";
 import type { Metadata } from "next";
 import type { Viewport } from "next";
-import { Inter } from "next/font/google";
-import Navbar from "@/components/(homepage)/navbar/Navbar";
-import Footer from "@/components/(homepage)/footer/Footer";
-
-const InterFont = Inter({ subsets: ["latin"], display: "swap", variable: '--font-inter', });
+import TopBar from "@/components/(examples)/top-bar/TopBar";
 
 export const metadata: Metadata = {
     title: {
@@ -102,10 +98,9 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en-US">
-            <body className={`antialiased ${InterFont.variable} font-inter`}>
-                <Navbar />
+            <body className="antialiased">
+                <TopBar />
                 {children}
-                <Footer />
             </body>
         </html>
     );
