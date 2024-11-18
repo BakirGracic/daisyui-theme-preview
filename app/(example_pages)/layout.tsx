@@ -2,12 +2,15 @@ import "@/css/tailwind-base.css";
 import "@/css/global.css";
 import type { Metadata } from "next";
 import type { Viewport } from "next";
+import { Inter } from "next/font/google";
 import TopBar from "@/components/(examples)/top-bar/TopBar";
+
+const InterFont = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
 
 export const metadata: Metadata = {
     title: {
         default: "DaisyUI Theme Preview",
-        template: "DaisyUI Theme Preview %s",
+        template: "%s | DaisyUI Theme Preview",
     },
     description: "Discover and preview all preset and custom DaisyUI themes in one place with real examples & plain components. Explore a variety of stylish, responsive, and customizable themes perfect for any Tailwind CSS project. Find inspiration, test features, and easily select the theme that best fits your web design needs!",
     generator: "Next.js 15",
@@ -54,7 +57,7 @@ export const metadata: Metadata = {
     manifest: `${process.env.APP_URL}/site.webmanifest`,
     twitter: {
         card: "app",
-        title: "Preview DaisyUI themes & components",
+        title: "DaisyUI Theme Preview",
         description: "Discover and preview all preset and custom DaisyUI themes in one place with real examples & plain components. Explore a variety of stylish, responsive, and customizable themes perfect for any Tailwind CSS project. Find inspiration, test features, and easily select the theme that best fits your web design needs!",
         siteId: "1704851009380704256",
         creator: "@gracic_bakir",
@@ -98,9 +101,9 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en-US">
-            <body className="antialiased">
+            <body className={`antialiased ${InterFont.variable} font-inter`}>
                 <TopBar />
-                {children}
+                <div className="mt-20">{children}</div>
             </body>
         </html>
     );

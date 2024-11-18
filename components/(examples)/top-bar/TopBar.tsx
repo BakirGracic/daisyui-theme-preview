@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function TopBar() {
     return (
-        <div className="h-20 p-3 bg-black flex items-center justify-between fixed top-o left-0 right-0 z-[99999]">
+        <div className="h-20 p-3 bg-black flex items-center justify-between fixed top-0 left-0 right-0 z-[99999]">
             <Link
                 href="/examples"
-                className="btn"
+                className="btn bg-white text-black"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@ export default function TopBar() {
                 </svg>
                 Back
             </Link>
-            <p className="font-semibold text-xl">DaisyUI Theme Preview</p>
+            <p className="font-semibold text-xl text-white">DaisyUI Theme Preview</p>
             <ThemeController />
         </div>
     );
