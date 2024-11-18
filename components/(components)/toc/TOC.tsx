@@ -34,9 +34,7 @@ const sections = [
 export default function TOC() {
     return (
         <div className="mx-auto p-4 my-12 md:my-20 max-w-[900px] ">
-            <div className="prose mb-8 text-center mx-auto">
-                <h1>Jump to...</h1>
-            </div>
+            <div className="mb-8 text-center mx-auto font-bold text-3xl">Jump to...</div>
             <div className="grid gap-3 md:gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
                 {sections.map((section) => (
                     <Link

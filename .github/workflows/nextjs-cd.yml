@@ -1,12 +1,19 @@
 name: Next.js CD
 
+concurrency:
+    group: production
+    cancel-in-progress: true
+
 on:
     push:
-        branches: ["main"]
+        branches:
+            - main
+    workflow_dispatch:
 
 jobs:
     build-and-deploy:
         runs-on: self-hosted
+        environment: production
 
         steps:
             - name: Checkout
