@@ -214,7 +214,7 @@ export default function Button() {
                 loading
             </button>
             <ExplanatoryTitle title="Button without click animation" />
-            <button className="btn no-animation">I don't have click animation</button>
+            <button className="btn no-animation">I don&apos;t have click animation</button>
         </>
     );
 }
