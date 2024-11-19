@@ -1,5 +1,5 @@
-import CustomExplanation from "@/components/(custom)/custom-explanation/CustomExplanation";
-import CustomPicker from "@/components/(custom)/custom-picker/CustomPicker";
+import ParameterInfo from "@/components/(custom)/ParameterInfo";
+import ParameterTweaker from "@/components/(custom)/ParameterTweaker";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
 export default function Page() {
     return (
         <>
-            <CustomExplanation />
-            <CustomPicker />
+            <ParameterInfo />
+            <ParameterTweaker />
         </>
     );
 }

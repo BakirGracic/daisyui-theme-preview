@@ -1,4 +1,4 @@
-import ExampleCards from "@/components/(examples)/cards/ExampleCards";
+import Cards from "@/components/(examples)/Cards";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -25,9 +25,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-    return (
-        <>
-            <ExampleCards />
-        </>
-    );
+    return <Cards />;
 }

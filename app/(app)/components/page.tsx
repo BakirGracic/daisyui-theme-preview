@@ -1,6 +1,6 @@
-import TOC from "@/components/(components)/toc/TOC";
-import ComponentsList from "@/components/(components)/body/ComponentsList";
-import BackToTop from "@/components/(components)/body/BackToTop";
+import TOC from "@/components/(components)/TOC";
+import ComponentsList from "@/components/(components)/ComponentsList";
+import BackToTop from "@/components/(components)/BackToTop";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

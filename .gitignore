@@ -29,7 +29,7 @@ yarn-error.log*
 
 # env files (can opt-in for commiting if needed)
 .env*
-# using only these env files
+# these 2 are being used
 !.env.production
 !.env.development
 

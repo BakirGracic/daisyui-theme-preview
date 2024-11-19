@@ -97,7 +97,7 @@ export default function Page() {
                                 >
                                     <div className="w-10 rounded-full">
                                         <img
-                                            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                                            src="/images/avatar.webp"
                                             alt="profile"
                                         />
                                     </div>
@@ -1224,7 +1224,7 @@ export default function Page() {
                             <a href="/app/welcome">
                                 <img
                                     className="mask mask-squircle w-10"
-                                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                                    src="/images/avatar.webp"
                                     alt="DashWind Logo"
                                 />
                                 DashWind{" "}

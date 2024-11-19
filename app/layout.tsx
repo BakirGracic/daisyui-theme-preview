@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import type { Viewport } from "next";
 import { Inter } from "next/font/google";
 
-const InterFont = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
+const InterFont = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
     title: {
@@ -91,16 +91,13 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-    themeColor: [
-        { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-        { media: "(prefers-color-scheme: dark)", color: "#000000" },
-    ],
+    themeColor: "#1D232A",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en-US">
-            <body className={`antialiased ${InterFont.variable} font-inter`}>{children}</body>
+            <body className={`antialiased ${InterFont.className}`}>{children}</body>
         </html>
     );
 }

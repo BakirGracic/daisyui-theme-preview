@@ -1,6 +1,11 @@
-/* CUSTOM UTILITY CLASSES */
+/* CUSTOM CLASSES */
 
 /* max width */
 .viewportMaxWidth {
     @apply max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto px-3;
+}
+
+/* uniform top margin */
+.topMargin {
+    @apply mt-12 md:mt-20;
 }
