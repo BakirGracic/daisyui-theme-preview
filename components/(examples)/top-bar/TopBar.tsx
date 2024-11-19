@@ -6,7 +6,7 @@ export default function TopBar() {
         <div className="h-20 p-3 bg-black flex items-center justify-between fixed top-0 left-0 right-0 z-[99999]">
             <Link
                 href="/examples"
-                className="btn bg-white text-black"
+                className="btn bg-white text-black hover:bg-slate-400"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
