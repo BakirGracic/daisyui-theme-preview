@@ -1,39 +1,43 @@
 "use client";
 
 import { useState } from "react";
-import ParameterTweakerInput from "@/components/(custom)/ParameterTweakerInput";
+import ParameterTweakerHexInput from "@/components/(custom)/ParameterTweakerHexInput";
+import ParameterTweakerCSSInput from "@/components/(custom)/ParameterTweakerCSSInput";
 import type { CustomThemeProps } from "@/types/custom_theme";
+import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
+import { ClipboardIcon } from "@heroicons/react/24/outline";
 
 const defaultCustomTheme: CustomThemeProps = {
-    primary: "",
-    primaryContent: "",
-    secondary: "",
-    secondaryContent: "",
-    accent: "",
-    accentContent: "",
-    neutral: "",
-    neutralContent: "",
-    base100: "",
-    base200: "",
-    base300: "",
-    baseContent: "",
-    info: "",
-    infoContent: "",
-    success: "",
-    successContent: "",
-    warning: "",
-    warningContent: "",
-    error: "",
-    errorContent: "",
-    roundedBox: "",
-    roundedBtn: "",
-    roundedBadge: "",
-    animationBtn: "",
-    animationInput: "",
-    btnFocusScale: "",
-    borderBtn: "",
-    tabBorder: "",
-    tabRadius: "",
+    primary: "#7480FF",
+    primaryContent: "#050617",
+    secondary: "#FF52D9",
+    secondaryContent: "#190211",
+    accent: "#00CDB8",
+    accentContent: "#000F0C",
+    neutral: "#2A323C",
+    neutralContent: "#A6ADBB",
+    base100: "#1D232A",
+    base200: "#191E24",
+    base300: "#15191E",
+    baseContent: "#A6ADBB",
+    info: "#00B5FF",
+    infoContent: "#000000",
+    success: "#00A96E",
+    successContent: "#000000",
+    warning: "#FFBE00",
+    warningContent: "#000000",
+    error: "#FF5861",
+    errorContent: "#000000",
+    // ---
+    roundedBox: "1rem",
+    roundedBtn: ".5rem",
+    roundedBadge: "1.9rem",
+    animationBtn: ".25s",
+    animationInput: ".2s",
+    btnFocusScale: ".95",
+    borderBtn: "1px",
+    tabBorder: "1px",
+    tabRadius: ".5rem",
 };
 
 export default function ParameterTweaker() {
@@ -44,7 +48,7 @@ export default function ParameterTweaker() {
         return hexRegex.test(value);
     };
 
-    const handleInputChange = (value: string, name: keyof CustomThemeProps) => {
+    const handleHexInputChange = (value: string, name: keyof CustomThemeProps) => {
         if (isValidHex(value.toLowerCase())) {
             setCustomTheme((prevTheme) => ({
                 ...prevTheme,
@@ -53,247 +57,295 @@ export default function ParameterTweaker() {
         }
     };
 
+    const handleCSSInputChange = (value: string, name: keyof CustomThemeProps) => {
+        setCustomTheme((prevTheme) => ({
+            ...prevTheme,
+            [name]: value,
+        }));
+    };
+
+    const handleSaveTheme = () => {
+        alert("MAKE ME!");
+    };
+
+    const handleCopyConfig = () => {
+        alert("MAKE ME!");
+    };
+
     return (
         <div className="viewportMaxWidth topMargin">
             <div className="prose mb-8">
                 <h1 id="generator">Generator</h1>
             </div>
 
-            {/* inputs */}
-            <div className="flex flex-col gap-1">
-                {/* primary */}
-                <ParameterTweakerInput
-                    name="primary"
-                    value={customTheme.primary}
-                    label="Primary"
-                    handleInputChange={handleInputChange}
-                />
+            <div className="flex gap-8">
+                {/* sidebar */}
+                <div className="flex flex-col gap-1">
+                    {/* actions */}
+                    <div
+                        onClick={handleSaveTheme}
+                        className="btn btn-primary"
+                    >
+                        <ArrowDownTrayIcon className="size-5" />
+                        Save Theme
+                    </div>
+                    <div
+                        onClick={handleCopyConfig}
+                        className="btn btn-secondary"
+                    >
+                        <ClipboardIcon className="size-5" />
+                        Copy Config
+                    </div>
 
-                {/* primaryContent */}
-                <ParameterTweakerInput
-                    name="primaryContent"
-                    value={customTheme.primaryContent}
-                    label="Primary Content"
-                    handleInputChange={handleInputChange}
-                />
+                    <div className="divider my-2"></div>
 
-                {/* secondary */}
-                <ParameterTweakerInput
-                    name="secondary"
-                    value={customTheme.secondary}
-                    label="Secondary"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* primary */}
+                    <ParameterTweakerHexInput
+                        name="primary"
+                        value={customTheme.primary}
+                        label="Primary"
+                        handleInputChange={handleHexInputChange}
+                    />
 
-                {/* secondaryContent */}
-                <ParameterTweakerInput
-                    name="secondaryContent"
-                    value={customTheme.secondaryContent}
-                    label="Secondary Content"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* primaryContent */}
+                    <ParameterTweakerHexInput
+                        name="primaryContent"
+                        value={customTheme.primaryContent}
+                        label="Primary Content"
+                        handleInputChange={handleHexInputChange}
+                    />
 
-                {/* accent */}
-                <ParameterTweakerInput
-                    name="accent"
-                    value={customTheme.accent}
-                    label="Accent"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* secondary */}
+                    <ParameterTweakerHexInput
+                        name="secondary"
+                        value={customTheme.secondary}
+                        label="Secondary"
+                        handleInputChange={handleHexInputChange}
+                    />
 
-                {/* accentContent */}
-                <ParameterTweakerInput
-                    name="accentContent"
-                    value={customTheme.accentContent}
-                    label="Accent Content"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* secondaryContent */}
+                    <ParameterTweakerHexInput
+                        name="secondaryContent"
+                        value={customTheme.secondaryContent}
+                        label="Secondary Content"
+                        handleInputChange={handleHexInputChange}
+                    />
 
-                {/* neutral */}
-                <ParameterTweakerInput
-                    name="neutral"
-                    value={customTheme.neutral}
-                    label="Neutral"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* accent */}
+                    <ParameterTweakerHexInput
+                        name="accent"
+                        value={customTheme.accent}
+                        label="Accent"
+                        handleInputChange={handleHexInputChange}
+                    />
 
-                {/* neutralContent */}
-                <ParameterTweakerInput
-                    name="neutralContent"
-                    value={customTheme.neutralContent}
-                    label="Neutral Content"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* accentContent */}
+                    <ParameterTweakerHexInput
+                        name="accentContent"
+                        value={customTheme.accentContent}
+                        label="Accent Content"
+                        handleInputChange={handleHexInputChange}
+                    />
 
-                {/* base100 */}
-                <ParameterTweakerInput
-                    name="base100"
-                    value={customTheme.base100}
-                    label="Base 100"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* neutral */}
+                    <ParameterTweakerHexInput
+                        name="neutral"
+                        value={customTheme.neutral}
+                        label="Neutral"
+                        handleInputChange={handleHexInputChange}
+                    />
 
-                {/* base200 */}
-                <ParameterTweakerInput
-                    name="base200"
-                    value={customTheme.base200}
-                    label="Base 200"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* neutralContent */}
+                    <ParameterTweakerHexInput
+                        name="neutralContent"
+                        value={customTheme.neutralContent}
+                        label="Neutral Content"
+                        handleInputChange={handleHexInputChange}
+                    />
 
-                {/* base300 */}
-                <ParameterTweakerInput
-                    name="base300"
-                    value={customTheme.base300}
-                    label="Base 300"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* base100 */}
+                    <ParameterTweakerHexInput
+                        name="base100"
+                        value={customTheme.base100}
+                        label="Base 100"
+                        handleInputChange={handleHexInputChange}
+                    />
 
-                {/* baseContent */}
-                <ParameterTweakerInput
-                    name="baseContent"
-                    value={customTheme.baseContent}
-                    label="Base Content"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* base200 */}
+                    <ParameterTweakerHexInput
+                        name="base200"
+                        value={customTheme.base200}
+                        label="Base 200"
+                        handleInputChange={handleHexInputChange}
+                    />
 
-                {/* info */}
-                <ParameterTweakerInput
-                    name="info"
-                    value={customTheme.info}
-                    label="Info"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* base300 */}
+                    <ParameterTweakerHexInput
+                        name="base300"
+                        value={customTheme.base300}
+                        label="Base 300"
+                        handleInputChange={handleHexInputChange}
+                    />
 
-                {/* infoContent */}
-                <ParameterTweakerInput
-                    name="infoContent"
-                    value={customTheme.infoContent}
-                    label="Info Content"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* baseContent */}
+                    <ParameterTweakerHexInput
+                        name="baseContent"
+                        value={customTheme.baseContent}
+                        label="Base Content"
+                        handleInputChange={handleHexInputChange}
+                    />
 
-                {/* success */}
-                <ParameterTweakerInput
-                    name="success"
-                    value={customTheme.success}
-                    label="Success"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* info */}
+                    <ParameterTweakerHexInput
+                        name="info"
+                        value={customTheme.info}
+                        label="Info"
+                        handleInputChange={handleHexInputChange}
+                    />
 
-                {/* successContent */}
-                <ParameterTweakerInput
-                    name="successContent"
-                    value={customTheme.successContent}
-                    label="Success Content"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* infoContent */}
+                    <ParameterTweakerHexInput
+                        name="infoContent"
+                        value={customTheme.infoContent}
+                        label="Info Content"
+                        handleInputChange={handleHexInputChange}
+                    />
 
-                {/* warning */}
-                <ParameterTweakerInput
-                    name="warning"
-                    value={customTheme.warning}
-                    label="Warning"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* success */}
+                    <ParameterTweakerHexInput
+                        name="success"
+                        value={customTheme.success}
+                        label="Success"
+                        handleInputChange={handleHexInputChange}
+                    />
 
-                {/* warningContent */}
-                <ParameterTweakerInput
-                    name="warningContent"
-                    value={customTheme.warningContent}
-                    label="Warning Content"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* successContent */}
+                    <ParameterTweakerHexInput
+                        name="successContent"
+                        value={customTheme.successContent}
+                        label="Success Content"
+                        handleInputChange={handleHexInputChange}
+                    />
 
-                {/* error */}
-                <ParameterTweakerInput
-                    name="error"
-                    value={customTheme.error}
-                    label="Error"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* warning */}
+                    <ParameterTweakerHexInput
+                        name="warning"
+                        value={customTheme.warning}
+                        label="Warning"
+                        handleInputChange={handleHexInputChange}
+                    />
 
-                {/* errorContent */}
-                <ParameterTweakerInput
-                    name="errorContent"
-                    value={customTheme.errorContent}
-                    label="Error Content"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* warningContent */}
+                    <ParameterTweakerHexInput
+                        name="warningContent"
+                        value={customTheme.warningContent}
+                        label="Warning Content"
+                        handleInputChange={handleHexInputChange}
+                    />
 
-                <div className="divider"></div>
+                    {/* error */}
+                    <ParameterTweakerHexInput
+                        name="error"
+                        value={customTheme.error}
+                        label="Error"
+                        handleInputChange={handleHexInputChange}
+                    />
 
-                {/* roundedBox */}
-                <ParameterTweakerInput
-                    name="roundedBox"
-                    value={customTheme.roundedBox}
-                    label="Rounded Box"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* errorContent */}
+                    <ParameterTweakerHexInput
+                        name="errorContent"
+                        value={customTheme.errorContent}
+                        label="Error Content"
+                        handleInputChange={handleHexInputChange}
+                    />
 
-                {/* roundedBtn */}
-                <ParameterTweakerInput
-                    name="roundedBtn"
-                    value={customTheme.roundedBtn}
-                    label="Rounded Button"
-                    handleInputChange={handleInputChange}
-                />
+                    <div className="divider my-2"></div>
 
-                {/* roundedBadge */}
-                <ParameterTweakerInput
-                    name="roundedBadge"
-                    value={customTheme.roundedBadge}
-                    label="Rounded Badge"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* roundedBox */}
+                    <ParameterTweakerCSSInput
+                        name="roundedBox"
+                        value={customTheme.roundedBox}
+                        label="Rounded Box"
+                        handleInputChange={handleCSSInputChange}
+                    />
 
-                {/* animationBtn */}
-                <ParameterTweakerInput
-                    name="animationBtn"
-                    value={customTheme.animationBtn}
-                    label="Animation Button"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* roundedBtn */}
+                    <ParameterTweakerCSSInput
+                        name="roundedBtn"
+                        value={customTheme.roundedBtn}
+                        label="Rounded Button"
+                        handleInputChange={handleCSSInputChange}
+                    />
 
-                {/* animationInput */}
-                <ParameterTweakerInput
-                    name="animationInput"
-                    value={customTheme.animationInput}
-                    label="Animation Input"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* roundedBadge */}
+                    <ParameterTweakerCSSInput
+                        name="roundedBadge"
+                        value={customTheme.roundedBadge}
+                        label="Rounded Badge"
+                        handleInputChange={handleCSSInputChange}
+                    />
 
-                {/* btnFocusScale */}
-                <ParameterTweakerInput
-                    name="btnFocusScale"
-                    value={customTheme.btnFocusScale}
-                    label="Button Focus Scale"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* animationBtn */}
+                    <ParameterTweakerCSSInput
+                        name="animationBtn"
+                        value={customTheme.animationBtn}
+                        label="Animation Button"
+                        handleInputChange={handleCSSInputChange}
+                    />
 
-                {/* borderBtn */}
-                <ParameterTweakerInput
-                    name="borderBtn"
-                    value={customTheme.borderBtn}
-                    label="Border Button"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* animationInput */}
+                    <ParameterTweakerCSSInput
+                        name="animationInput"
+                        value={customTheme.animationInput}
+                        label="Animation Input"
+                        handleInputChange={handleCSSInputChange}
+                    />
 
-                {/* tabBorder */}
-                <ParameterTweakerInput
-                    name="tabBorder"
-                    value={customTheme.tabBorder}
-                    label="Tab Border"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* btnFocusScale */}
+                    <ParameterTweakerCSSInput
+                        name="btnFocusScale"
+                        value={customTheme.btnFocusScale}
+                        label="Button Focus Scale"
+                        handleInputChange={handleCSSInputChange}
+                    />
 
-                {/* tabRadius */}
-                <ParameterTweakerInput
-                    name="tabRadius"
-                    value={customTheme.tabRadius}
-                    label="Tab Radius"
-                    handleInputChange={handleInputChange}
-                />
+                    {/* borderBtn */}
+                    <ParameterTweakerCSSInput
+                        name="borderBtn"
+                        value={customTheme.borderBtn}
+                        label="Border Button"
+                        handleInputChange={handleCSSInputChange}
+                    />
+
+                    {/* tabBorder */}
+                    <ParameterTweakerCSSInput
+                        name="tabBorder"
+                        value={customTheme.tabBorder}
+                        label="Tab Border"
+                        handleInputChange={handleCSSInputChange}
+                    />
+
+                    {/* tabRadius */}
+                    <ParameterTweakerCSSInput
+                        name="tabRadius"
+                        value={customTheme.tabRadius}
+                        label="Tab Radius"
+                        handleInputChange={handleCSSInputChange}
+                    />
+                </div>
+
+                {/* preview */}
+                <div className="rounded-box border border-neutral-content/30 w-full p-5">
+                    <div className="">
+                        <button className="btn">Button</button>
+                        <button className="btn btn-neutral">Neutral</button>
+                        <button className="btn btn-primary">Primary</button>
+                        <button className="btn btn-secondary">Secondary</button>
+                        <button className="btn btn-accent">Accent</button>
+                        <button className="btn btn-ghost">Ghost</button>
+                        <button className="btn btn-link">Link</button>
+                    </div>
+                </div>
             </div>
         </div>
     );
