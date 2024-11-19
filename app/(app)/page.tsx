@@ -5,11 +5,11 @@ import CTAProject from "@/components/(homepage)/cta-project/CTAProject";
 
 export default function Page() {
     return (
-        <main>
+        <>
             <HPIntro />
             <CTACards />
             <Stats />
             <CTAProject />
-        </main>
+        </>
     );
 }

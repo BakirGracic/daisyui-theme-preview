@@ -26,8 +26,8 @@ export const metadata: Metadata = {
 
 export default function Page() {
     return (
-        <main>
+        <>
             <ExampleCards />
-        </main>
+        </>
     );
 }

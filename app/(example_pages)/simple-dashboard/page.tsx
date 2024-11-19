@@ -122,7 +122,7 @@ export default function Page() {
                             </div>
                         </div>
                     </div>
-                    <main className="flex-1 overflow-y-auto md:pt-4 pt-4 px-6  bg-base-200">
+                    <div className="flex-1 overflow-y-auto md:pt-4 pt-4 px-6  bg-base-200">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div className="">
                                 <div className="w-72 ">
@@ -1195,7 +1195,7 @@ export default function Page() {
                             </div>
                         </div>
                         <div className="h-16"></div>
-                    </main>
+                    </div>
                 </div>
                 <div className="drawer-side  z-30  ">
                     <label

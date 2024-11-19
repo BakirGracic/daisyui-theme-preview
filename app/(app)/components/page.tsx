@@ -28,12 +28,12 @@ export const metadata: Metadata = {
 
 export default function Page() {
     return (
-        <main>
+        <>
             <TOC />
             <div className="viewportMaxWidth">
                 <ComponentsList />
             </div>
             <BackToTop />
-        </main>
+        </>
     );
 }

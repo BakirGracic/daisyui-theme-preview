@@ -5,7 +5,7 @@ export default function Layout({ children }: Readonly<{ children: React.ReactNod
     return (
         <>
             <Navbar />
-            {children}
+            <main>{children}</main>
             <Footer />
         </>
     );
