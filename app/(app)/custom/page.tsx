@@ -1,4 +1,5 @@
 import CustomExplanation from "@/components/(custom)/custom-explanation/CustomExplanation";
+import CustomPicker from "@/components/(custom)/custom-picker/CustomPicker";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default function Page() {
     return (
         <>
             <CustomExplanation />
+            <CustomPicker />
         </>
     );
 }

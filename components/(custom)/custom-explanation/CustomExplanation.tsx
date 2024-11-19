@@ -292,65 +292,6 @@ export default function CustomExplanation() {
                 </table>
             </div>
 
-            <h2>Color Utility Classes</h2>
-            <p>Below is a list of utility classes that can be paired with DaisyUI colors</p>
-            <ul>
-                <li>
-                    <code>bg-&#123;COLOR_NAME&#125;</code>
-                </li>
-                <li>
-                    <code>to-&#123;COLOR_NAME&#125;</code>
-                </li>
-                <li>
-                    <code>via-&#123;COLOR_NAME&#125;</code>
-                </li>
-                <li>
-                    <code>from-&#123;COLOR_NAME&#125;</code>
-                </li>
-                <li>
-                    <code>text-&#123;COLOR_NAME&#125;</code>
-                </li>
-                <li>
-                    <code>ring-&#123;COLOR_NAME&#125;</code>
-                </li>
-                <li>
-                    <code>fill-&#123;COLOR_NAME&#125;</code>
-                </li>
-                <li>
-                    <code>caret-&#123;COLOR_NAME&#125;</code>
-                </li>
-                <li>
-                    <code>stroke-&#123;COLOR_NAME&#125;</code>
-                </li>
-                <li>
-                    <code>border-&#123;COLOR_NAME&#125;</code>
-                </li>
-                <li>
-                    <code>divide-&#123;COLOR_NAME&#125;</code>
-                </li>
-                <li>
-                    <code>accent-&#123;COLOR_NAME&#125;</code>
-                </li>
-                <li>
-                    <code>shadow-&#123;COLOR_NAME&#125;</code>
-                </li>
-                <li>
-                    <code>outline-&#123;COLOR_NAME&#125;</code>
-                </li>
-                <li>
-                    <code>decoration-&#123;COLOR_NAME&#125;</code>
-                </li>
-                <li>
-                    <code>placeholder-&#123;COLOR_NAME&#125;</code>
-                </li>
-                <li>
-                    <code>ring-offset-&#123;COLOR_NAME&#125;</code>
-                </li>
-                <li>
-                    you can also change opacity using <code>&#123;UTILITY_CLASS&#125;/&#123;NUMBER&#125;</code>, e.g. <code>bg-primary/50</code>
-                </li>
-            </ul>
-
             <h2>CSS Variables</h2>
             <p>Some core theme design decisions are stored in CSS variables. Below is a table view of variables you can customize</p>
             <div className="overflow-x-auto">
