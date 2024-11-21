@@ -5,7 +5,6 @@ import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { useEffect, useState } from "react";
 import { defaultCustomTheme } from "@/components/(custom)/ParameterTweaker";
 import type { CustomThemeProps } from "@/types/custom_theme";
-import { parse } from "path";
 
 const themes: CurrentTheme[] = [
     { name: "Custom", value: "custom" },
