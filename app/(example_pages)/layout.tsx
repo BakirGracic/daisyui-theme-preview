@@ -10,6 +10,11 @@ export const metadata: Metadata = {
         title: "Example Page | DaisyUI Theme Preview",
         url: `${process.env.APP_URL}/custom`,
     },
+    robots: {
+        index: false,
+        follow: false,
+        nocache: true,
+    },
     twitter: {
         title: "Example Page | Preview DaisyUI themes & components",
     },

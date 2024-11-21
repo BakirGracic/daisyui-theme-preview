@@ -90,6 +90,7 @@ export default function Cards() {
                                     className="btn btn-circle btn-primary"
                                     href={card.linkHref}
                                     target="_blank"
+                                    rel="nofollow noopener noreferrer"
                                 >
                                     <ArrowTopRightOnSquareIcon className="size-6" />
                                 </Link>
