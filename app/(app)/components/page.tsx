@@ -1,6 +1,5 @@
 import TOC from "@/components/(components)/TOC";
 import ComponentsList from "@/components/(components)/ComponentsList";
-import BackToTop from "@/components/(components)/BackToTop";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -33,7 +32,6 @@ export default function Page() {
             <div className="viewportMaxWidth">
                 <ComponentsList />
             </div>
-            <BackToTop />
         </>
     );
 }
