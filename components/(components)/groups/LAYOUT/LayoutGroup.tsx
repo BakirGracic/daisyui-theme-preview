@@ -10,7 +10,7 @@ export default function LayoutGroup() {
                     title="example"
                     href="https://daisyui.com/components/example" // change me
                 />
-                example
+                contribution/help needed to add this...
             </section>
         </>
     );

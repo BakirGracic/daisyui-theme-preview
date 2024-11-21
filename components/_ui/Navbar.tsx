@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ThemeSwitcher from "@/components/_ui/ThemeSwitcher";
+import { Bars3Icon } from "@heroicons/react/24/solid";
 
 const links = [
     { href: "/", label: "Home" },
@@ -21,18 +22,7 @@ export default function Navbar() {
                         role="button"
                         className="btn btn-ghost lg:hidden"
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            className="size-6 fill-none stroke-current"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M4 6h16M4 12h8m-8 6h16"
-                            />
-                        </svg>
+                        <Bars3Icon className="size-6" />
                     </div>
                     {/* dropdown menu */}
                     <ul

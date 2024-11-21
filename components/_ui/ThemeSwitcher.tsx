@@ -40,8 +40,6 @@ const themes: CurrentTheme[] = [
     { name: "Sunset", value: "sunset" },
 ];
 
-// TODO add functionality to apply custom theme...
-
 export default function ThemeSwitcher() {
     const [currentTheme, setCurrentTheme] = useState<CurrentTheme>({ name: "Dark", value: "dark" });
 
