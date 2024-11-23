@@ -28,15 +28,20 @@ jobs:
 
             - name: Delete Old Folders
               run: rm -rf node_modules/ .next/
+              working-directory: src
 
             - name: Install Dependencies
               run: npm install --legacy-peer-deps
+              working-directory: src
 
             - name: Disable Next.js Telemetry
               run: npx next telemetry disable
+              working-directory: src
 
             - name: Build
               run: npm run build
+              working-directory: src
 
             - name: Restart PM2
               run: pm2 restart all
+              working-directory: src
