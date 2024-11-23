@@ -12,7 +12,7 @@ export default function TopBar() {
                 <ArrowLeftIcon className="size-5" />
                 Back
             </Link>
-            <p className="font-semibold text-xl text-white">DaisyUI Theme Preview</p>
+            <p className="font-semibold text-xl text-white hidden sm:block">DaisyUI Theme Preview</p>
             <ThemeSwitcher />
         </div>
     );
