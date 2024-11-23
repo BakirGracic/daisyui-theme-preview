@@ -21,25 +21,21 @@ jobs:
 
             - name: Use Node.js (22.x)
               uses: actions/setup-node@v4
-              working-directory: src
               with:
                 node-version: "22.x"
                 cache: "npm"
+                cache-dependency-path: "src/package-lock.json"
 
             - name: Delete Old Folders
-              working-directory: src
               run: rm -rf node_modules/ .next/
 
             - name: Install Dependencies
-              working-directory: src
               run: npm install --legacy-peer-deps
 
             - name: Disable Next.js Telemetry
-              working-directory: src
               run: npx next telemetry disable
 
             - name: Build
-              working-directory: src
               run: npm run build
 
             - name: Restart PM2
