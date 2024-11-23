@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Page() {
     return (
         <>
@@ -96,9 +98,11 @@ export default function Page() {
                                     className="btn btn-ghost btn-circle avatar"
                                 >
                                     <div className="w-10 rounded-full">
-                                        <img
+                                        <Image
                                             src="/images/avatar.webp"
                                             alt="profile"
+                                            width={999}
+                                            height={999}
                                         />
                                     </div>
                                 </label>
@@ -1222,10 +1226,12 @@ export default function Page() {
                         </button>
                         <li className="mb-2 font-semibold text-xl">
                             <a href="/app/welcome">
-                                <img
+                                <Image
                                     className="mask mask-squircle w-10"
                                     src="/images/avatar.webp"
                                     alt="DashWind Logo"
+                                    width={999}
+                                    height={999}
                                 />
                                 DashWind{" "}
                             </a>

@@ -1,7 +1,7 @@
 import { CustomThemeProps } from "@/types/custom_theme";
 
 export function applyCustomThemeCSSVariables(parsedTheme: CustomThemeProps) {
-    const cssVariables: { [key: string]: any } = {
+    const cssVariables: { [key: string]: string } = {
         "--p": hexToOklch(parsedTheme.primary),
         "--pc": hexToOklch(parsedTheme.primaryContent),
         "--s": hexToOklch(parsedTheme.secondary),
