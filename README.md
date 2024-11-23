@@ -1,3 +1,11 @@
+![DaisyUI Theme Preview](./assets/readme/images/homepage.png)
+
+<p style="">
+    <img style="display: inline-block; width: 33%;" src="./assets/readme/images/components.png" alt="Components" />
+    <img style="display: inline-block; width: 33%;" src="./assets/readme/images/examples.png" alt="Examples" />
+    <img style="display: inline-block; width: 33%;" src="./assets/readme/images/custom.png" alt="Custom" />
+</p>
+
 # DaisyUI Theme Preview
 
 ## Preview Preset & Custom DaisyUI Themes with Plain Components and Realistic Examples
