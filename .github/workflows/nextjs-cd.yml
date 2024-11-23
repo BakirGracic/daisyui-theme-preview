@@ -19,6 +19,9 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
 
+            - name: Goto Directory
+              run: cd src
+
             - name: Use Node.js (22.x)
               uses: actions/setup-node@v4
               with:
