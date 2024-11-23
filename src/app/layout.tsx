@@ -3,6 +3,7 @@ import "@/css/global.css";
 import type { Metadata } from "next";
 import type { Viewport } from "next";
 import { Inter } from "next/font/google";
+import { Toaster } from "sonner";
 
 const InterFont = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -97,7 +98,18 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en-US">
-            <body className={`antialiased ${InterFont.className}`}>{children}</body>
+            <body className={`antialiased ${InterFont.className}`}>
+                {children}
+                <Toaster
+                    theme="system"
+                    position="bottom-center"
+                    toastOptions={{
+                        duration: 3000,
+                        className: `${InterFont.className} text-lg bg-primary rounded-lg shadow-lg border-none text-primary-content`,
+                    }}
+                />
+                <style id="custom-theme-style-tag"></style>
+            </body>
         </html>
     );
 }
