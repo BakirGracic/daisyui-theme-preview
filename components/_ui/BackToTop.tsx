@@ -14,11 +14,14 @@ export default function BackToTop() {
                 scrollToTopButton?.classList.add("hidden");
             }
         };
+
         const backToTop = () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
         };
 
         scrollToTopButton?.addEventListener("click", backToTop);
+
+        scrollFunction();
 
         window.addEventListener("scroll", scrollFunction);
     }, []);
@@ -26,7 +29,7 @@ export default function BackToTop() {
     return (
         <button
             id="scrollToTopButton"
-            className="btn btn-primary btn-circle fixed right-10 bottom-10 hidden transition-all shadow-xl"
+            className="btn btn-primary btn-circle fixed right-6 bottom-6 sm:right-10 sm:bottom-10 hidden transition-all shadow-xl"
         >
             <ArrowUpIcon className="size-6" />
         </button>
