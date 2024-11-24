@@ -3,6 +3,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import ParameterTweakerPreview from "@/components/(custom)/ParameterTweakerPreview";
 import ParameterTweakerHexInput from "@/components/(custom)/ParameterTweakerHexInput";
 import ParameterTweakerCSSInput from "@/components/(custom)/ParameterTweakerCSSInput";
 import { applyCustomThemeCSSVariables } from "@/lib/theme";
@@ -48,7 +49,7 @@ export default function ParameterTweaker() {
         }
 
         // success toast
-        toast("Theme saved");
+        toast(<div className="!text-center mx-auto">Theme saved</div>);
     };
 
     const handleCopyConfig = () => {
@@ -81,7 +82,7 @@ export default function ParameterTweaker() {
         }
 
         // success toast
-        toast("Theme reset");
+        toast(<div className="!text-center mx-auto">Theme reset</div>);
     };
 
     useEffect(() => {
@@ -106,7 +107,7 @@ export default function ParameterTweaker() {
                     <h1 id="generator">Generator</h1>
                 </div>
 
-                <div className="flex gap-8">
+                <div className="flex gap-8 flex-col lg:flex-row">
                     {/* sidebar */}
                     <div className="flex flex-col gap-1">
                         {/* actions */}
@@ -374,17 +375,7 @@ export default function ParameterTweaker() {
                     </div>
 
                     {/* preview */}
-                    <div className="rounded-box border border-neutral-content/30 w-full p-5">
-                        <div className="">
-                            <button className="btn">Button</button>
-                            <button className="btn btn-neutral">Neutral</button>
-                            <button className="btn btn-primary">Primary</button>
-                            <button className="btn btn-secondary">Secondary</button>
-                            <button className="btn btn-accent">Accent</button>
-                            <button className="btn btn-ghost">Ghost</button>
-                            <button className="btn btn-link">Link</button>
-                        </div>
-                    </div>
+                    <ParameterTweakerPreview data={customTheme} />
                 </div>
             </div>
 
@@ -415,7 +406,7 @@ export default function ParameterTweaker() {
                                 onClick={() => {
                                     localStorage.setItem(process.env.NEXT_PUBLIC_LS_CUSTOM_THEME_KEY || "", JSON.stringify(customTheme));
                                     navigator.clipboard.writeText(customThemeConfig);
-                                    toast("Configuration copied");
+                                    toast(<div className="!text-center mx-auto">Configuration copied</div>);
                                 }}
                                 className="btn btn-primary flex items-center gap-2"
                             >

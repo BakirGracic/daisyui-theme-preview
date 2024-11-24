@@ -4,9 +4,8 @@ export default function ParameterInfo() {
     return (
         <div className="prose viewportMaxWidth topMargin">
             <h1>Custom Theme Generator</h1>
-            <p>
-                Using this page you can create your fully custom DaisyUI theme. <br /> Before you start, please read what parameters you can change for better understanding. Happy themeing!
-            </p>
+            <p>Using this page you can create your fully custom DaisyUI theme.</p>
+            <p>Before you start, please read what parameters you can change for better understanding. Happy themeing!</p>
             <Link
                 className="btn btn-primary mb-7"
                 href="#generator"

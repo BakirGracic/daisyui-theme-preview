@@ -36,7 +36,7 @@ export function applyCustomThemeCSSVariables(parsedTheme: CustomThemeProps) {
     const styleTag = document.getElementById("custom-theme-style-tag") as HTMLStyleElement;
 
     if (styleTag) {
-        const cssContent = `:root:has(input.theme-controller[value="custom"]:checked) { ${Object.entries(cssVariables)
+        const cssContent = `:root:has(input.theme-controller[value="custom"]:checked) #custom-theme-preview-box { ${Object.entries(cssVariables)
             .map(([key, value]) => `${key}: ${value};`)
             .join(" ")} }`;
         styleTag.innerHTML = cssContent;
