@@ -1,6 +1,6 @@
 ![DaisyUI Theme Preview](./assets/readme/images/homepage.png)
 
-<p style="">
+<p style="width: 97%; margin: 0 auto;">
     <img style="display: inline-block; width: 33%;" src="./assets/readme/images/components.png" alt="Components" />
     <img style="display: inline-block; width: 33%;" src="./assets/readme/images/examples.png" alt="Examples" />
     <img style="display: inline-block; width: 33%;" src="./assets/readme/images/custom.png" alt="Custom" />
