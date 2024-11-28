@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import type { Viewport } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "sonner";
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const InterFont = Inter({ subsets: ["latin"], display: "swap" });
 
