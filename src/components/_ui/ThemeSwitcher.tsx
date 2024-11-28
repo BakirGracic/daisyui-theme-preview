@@ -124,9 +124,9 @@ export default function ThemeSwitcher() {
             <div
                 tabIndex={0}
                 role="button"
-                className="btn btn-primary m-1"
+                className="btn btn-primary m-1 flex-nowrap"
             >
-                Theme ({currentTheme.name})
+                <span className="text-nowrap">Theme ({currentTheme.name})</span>
                 <ChevronDownIcon className="inline-block h-4 w-4" />
             </div>
             <ul

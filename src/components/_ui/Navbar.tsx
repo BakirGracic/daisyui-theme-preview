@@ -20,7 +20,7 @@ export default function Navbar() {
                     <div
                         tabIndex={0}
                         role="button"
-                        className="btn btn-ghost lg:hidden"
+                        className="btn btn-ghost lg:hidden pr-2"
                     >
                         <Bars3Icon className="size-6" />
                     </div>
@@ -39,7 +39,7 @@ export default function Navbar() {
                 {/* daisyui link/logo */}
                 <Link
                     href="https://daisyui.com/"
-                    className="btn btn-ghost text-xl"
+                    className="btn btn-ghost text-xl pl-2"
                 >
                     DaisyUI
                 </Link>
