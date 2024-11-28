@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import type { Viewport } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "sonner";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const InterFont = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -109,6 +110,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                     }}
                 />
                 <style id="custom-theme-style-tag"></style>
+                {process.env.GA_ID && <GoogleAnalytics gaId={process.env.GA_ID} />}
             </body>
         </html>
     );
