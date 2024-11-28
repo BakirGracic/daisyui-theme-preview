@@ -1,4 +1,4 @@
-import { CustomThemeProps } from "@/types/custom_theme";
+import { CustomThemeProps } from "@/types/themeing_context";
 
 export const defaultCustomTheme: CustomThemeProps = {
     primary: "#7480FF",

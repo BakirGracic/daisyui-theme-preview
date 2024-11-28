@@ -1,7 +1,7 @@
-import { CustomThemeProps } from "@/types/custom_theme";
+import { CustomThemeProps } from "@/types/themeing_context";
 
-export function applyCustomThemeCSSVariables(parsedTheme: CustomThemeProps) {
-    const cssVariables: { [key: string]: string } = {
+export function addCustomThemeCSSVars(parsedTheme: CustomThemeProps) {
+    const css_vars: { [key: string]: string } = {
         "--p": hexToOklch(parsedTheme.primary),
         "--pc": hexToOklch(parsedTheme.primaryContent),
         "--s": hexToOklch(parsedTheme.secondary),
@@ -33,13 +33,16 @@ export function applyCustomThemeCSSVariables(parsedTheme: CustomThemeProps) {
         "--tab-radius": parsedTheme.tabRadius,
     };
 
-    const styleTag = document.getElementById("custom-theme-style-tag") as HTMLStyleElement;
+    const style_tag = document.getElementById("custom-theme-style-tag") as HTMLStyleElement;
 
-    if (styleTag) {
-        const cssContent = `:root:has(input.theme-controller[value="custom"]:checked) #custom-theme-preview-box { ${Object.entries(cssVariables)
+    if (style_tag) {
+        const css_code = Object.entries(css_vars)
             .map(([key, value]) => `${key}: ${value};`)
-            .join(" ")} }`;
-        styleTag.innerHTML = cssContent;
+            .join(" ");
+
+        const prepared_css = `:root:has(input.theme-controller[value="custom"]:checked) { ${css_code} } #custom-theme-preview-box { ${css_code} }`;
+
+        style_tag.innerHTML = prepared_css;
     }
 }
 

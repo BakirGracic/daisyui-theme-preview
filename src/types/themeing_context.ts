@@ -1,3 +1,23 @@
+export interface ThemeingContextProps {
+    currentTheme: CurrentTheme;
+    setCurrentTheme: (theme: CurrentTheme) => void;
+    customTheme: CustomThemeProps;
+    setCustomTheme: (theme: CustomThemeProps) => void;
+    customThemeConfig: string;
+    setCustomThemeConfig: (config: string) => void;
+    availableThemes: CurrentTheme[];
+    handleThemeChange: (newTheme: string) => void;
+    handleHexInputChange: (e: string, name: keyof CustomThemeProps) => void;
+    handleCSSInputChange: (e: string, name: keyof CustomThemeProps) => void;
+    handleCopyConfig: () => void;
+    handleReset: () => void;
+}
+
+export type CurrentTheme = {
+    name: string;
+    value: string;
+};
+
 export type CustomThemeProps = {
     primary: string;
     primaryContent: string;

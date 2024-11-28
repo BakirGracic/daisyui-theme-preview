@@ -1,4 +1,4 @@
-import type { CustomThemeProps } from "@/types/custom_theme";
+import type { CustomThemeProps } from "@/types/themeing_context";
 
 export default function ParameterTweakerCSSInput({ name, value, label, handleInputChange }: { name: keyof CustomThemeProps; value: string; label: string; handleInputChange: (value: string, name: keyof CustomThemeProps) => void }) {
     return (

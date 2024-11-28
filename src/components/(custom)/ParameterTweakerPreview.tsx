@@ -1,6 +1,3 @@
-import { useEffect } from "react";
-import { applyCustomThemeCSSVariables } from "@/lib/theme";
-import { CustomThemeProps } from "@/types/custom_theme";
 import AvatarWEBP from "@/public/images/avatar.webp";
 import Image from "next/image";
 
@@ -8,15 +5,11 @@ const Wrapper = ({ children, className }: { children: React.ReactNode; className
     return <div className={`flex w-full flex-wrap gap-3 justify-center mb-10 overflow-auto ${className}`}>{children}</div>;
 };
 
-export default function ParameterTweakerPreview({ data }: { data: CustomThemeProps }) {
-    useEffect(() => {
-        applyCustomThemeCSSVariables(data);
-    }, [data]);
-
+export default function ParameterTweakerPreview() {
     return (
         <div
             id="custom-theme-preview-box"
-            className="rounded-box border border-neutral-content/30 w-full max-h-[1280px] p-3 md:p-5 overflow-auto bg-base-100 text-base-content"
+            className="rounded-box border border-neutral-content/30 w-full max-h-[1280px] p-3 md:p-5 overflow-y-auto bg-base-100 text-base-content"
         >
             <Wrapper>
                 <button className="btn">Default</button>
