@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/src/"
+    schedule:
+      interval: "weekly"
+    assignees:
+      - "BakirGracic"
+    commit-message:
+      - prefix: "dependabot npm update: "
+    labels:
+      - "dependabot-npm-update"
+    reviewers:
+      - "BakirGracic"
