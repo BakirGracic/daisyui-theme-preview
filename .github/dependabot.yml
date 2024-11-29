@@ -7,7 +7,7 @@ updates:
     assignees:
       - "BakirGracic"
     commit-message:
-      - prefix: "dependabot npm update: "
+      prefix: "dependabot npm update: "
     labels:
       - "dependabot-npm-update"
     reviewers:
