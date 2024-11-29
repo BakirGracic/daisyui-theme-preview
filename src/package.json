@@ -22,7 +22,7 @@
         "@types/react-dom": "^18",
         "autoprefixer": "^10.4.20",
         "daisyui": "^4.12.14",
-        "eslint": "^8",
+        "eslint": "^9",
         "eslint-config-next": "15.0.2",
         "heroicons": "^2.2.0",
         "highlight.js": "^11.10.0",
