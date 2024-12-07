@@ -18,6 +18,9 @@ jobs:
         environment: production
 
         steps:
+            - name: Stop PM2
+              run: pm2 stop all
+              
             - name: Checkout
               uses: actions/checkout@v4
 
