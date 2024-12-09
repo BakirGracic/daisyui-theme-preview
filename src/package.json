@@ -21,7 +21,7 @@
         "@types/react": "^18",
         "@types/react-dom": "^18",
         "autoprefixer": "^10.4.20",
-        "daisyui": "^4.12.14",
+        "daisyui": "^4.12.20",
         "eslint": "^9",
         "eslint-config-next": "15.0.3",
         "heroicons": "^2.2.0",
