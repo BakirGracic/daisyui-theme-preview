@@ -19,7 +19,7 @@
         "@tailwindcss/typography": "^0.5.15",
         "@types/node": "^22",
         "@types/react": "^19",
-        "@types/react-dom": "^18",
+        "@types/react-dom": "^19",
         "autoprefixer": "^10.4.20",
         "daisyui": "^4.12.22",
         "eslint": "^9",
