@@ -13,42 +13,32 @@ on:
     workflow_dispatch:
 
 jobs:
-    build-and-deploy:
+    build_and_deploy:
         runs-on: self-hosted
         environment: production
 
-        steps:
-            - name: Stop PM2
-              run: pm2 stop all
-              
-            - name: Checkout
+        steps:           
+            - name: Checkout Repository Code
               uses: actions/checkout@v4
 
-            - name: Use Node.js (22.x)
+            - name: Use Node.js (latest)
               uses: actions/setup-node@v4
-              with:
-                node-version: "22.x"
-                cache: "npm"
-                cache-dependency-path: "src/package-lock.json"
-
-            - name: Delete Old Folders
-              run: rm -rf node_modules/ .next/
+              
+            - name: Install NPM Dependencies
+              run: npm ci
               working-directory: src
 
-            - name: Install Dependencies
-              run: npm install --legacy-peer-deps
-              working-directory: src
-
-            - name: Disable Next.js Telemetry
-              run: npx next telemetry disable
-              working-directory: src
-
-            - name: Build
-              run: npm run build
+            - name: Build NextJS
               working-directory: src
               env:
                 GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
+              run: |
+                  npx next telemetry disable
+                  pm2 stop 0
+                  rm -rf .next
+                  npm run build
 
-            - name: Restart PM2
-              run: pm2 restart all
+            - name: Run NextJS
               working-directory: src
+              run: |
+                  pm2 restart 0 --update-env
