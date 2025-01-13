@@ -16,7 +16,7 @@
     },
     "devDependencies": {
         "@heroicons/react": "^2.2.0",
-        "@tailwindcss/typography": "^0.5.15",
+        "@tailwindcss/typography": "^0.5.16",
         "@types/node": "^22",
         "@types/react": "^19",
         "@types/react-dom": "^19",
