@@ -23,7 +23,7 @@
         "autoprefixer": "^10.4.20",
         "daisyui": "^4.12.23",
         "eslint": "^9",
-        "eslint-config-next": "15.1.5",
+        "eslint-config-next": "15.1.6",
         "heroicons": "^2.2.0",
         "highlight.js": "^11.11.1",
         "postcss": "^8",
