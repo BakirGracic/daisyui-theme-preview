@@ -1,4 +1,3 @@
-import "@/css/tailwind-base.css";
 import "@/css/global.css";
 import type { Metadata } from "next";
 import type { Viewport } from "next";

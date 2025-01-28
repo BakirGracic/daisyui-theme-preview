@@ -10,6 +10,7 @@
     },
     "dependencies": {
         "@next/third-parties": "^15.1.6",
+        "@tailwindcss/postcss": "^4.0.0",
         "next": "^15.1.6",
         "react": "^19.0.0",
         "react-dom": "^19.0.0"
@@ -21,12 +22,12 @@
         "@types/react": "^19",
         "@types/react-dom": "^19",
         "autoprefixer": "^10.4.20",
-        "daisyui": "^4.12.23",
+        "daisyui": "^5.0.0-beta.2",
         "eslint": "^9",
         "eslint-config-next": "15.1.6",
         "heroicons": "^2.2.0",
         "highlight.js": "^11.11.1",
-        "postcss": "^8",
+        "postcss": "^8.5.1",
         "sonner": "^1.7.2",
         "tailwindcss": "^4.0.0",
         "typescript": "^5"

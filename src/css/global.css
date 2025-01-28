@@ -1,3 +1,6 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
 /* CUSTOM CLASSES */
 
 /* max width */
