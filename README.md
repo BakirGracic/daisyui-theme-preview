@@ -1,3 +1,9 @@
+# This project is archived due to DaisyUI V5 having a good theme picker/customizer!
+
+<br />
+<br />
+<br />
+
 ![DaisyUI Theme Preview](./assets/readme/images/homepage.png)
 
 <p style="width: 97%; margin: 0 auto;">
